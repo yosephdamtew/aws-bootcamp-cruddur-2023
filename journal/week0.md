@@ -11,7 +11,7 @@
 
 - I set up a Billing alarm and Budget based on what I think I can afford to pay, please see screenshot below for your reference. <br />
 ![Budgets](/journal/assets/Budgets.PNG) <br />
-![Billing-Alert](journal/assets/Billing_Alert.PNG) <br />
+![Billing-Alert](/journal/assets/Billing_Alert.PNG) <br />
 
 ## Example of referencing a file in the codebase
 [An example of the reference file in my repo](/aws/json/budget-notifications-with-subscribers.json) aws/json/budget-notifications-with-subscribers.json
