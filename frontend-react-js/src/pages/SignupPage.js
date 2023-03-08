@@ -4,7 +4,7 @@ import {ReactComponent as Logo} from '../components/svg/logo.svg';
 import { Link } from "react-router-dom";
 
 // [TODO] Authenication
-import Cookies from 'js-cookie'
+import { Auth } from 'aws-amplify';
 
 export default function SignupPage() {
 
@@ -17,17 +17,32 @@ export default function SignupPage() {
 
   const onsubmit = async (event) => {
     event.preventDefault();
-    console.log('SignupPage.onsubmit')
-    // [TODO] Authenication
-    Cookies.set('user.name', name)
-    Cookies.set('user.username', username)
-    Cookies.set('user.email', email)
-    Cookies.set('user.password', password)
-    Cookies.set('user.confirmation_code',1234)
-    window.location.href = `/confirm?email=${email}`
-    return false
+    setErrors('')
+    console.log('username' ,name)
+    console.log('email' ,email)
+    console.log('preferred_username' ,username)
+    try {
+      const { user } = await Auth.signUp({
+        username: email,
+        password: password,
+        attributes: {
+            name: name,
+            email: email,
+            preferred_username: username,
+          },
+          autoSignIn: {//optional - enables auto sign in ageter user is confirmed
+            enabled: true,
+         }
+       });
+       console.log(user);
+       windows.location.href = '/confirm?email=${email}'
+  } catch (error) {
+      console.log(error);
+      setErrors(error.message)
   }
-
+  return false
+}
+  
   const name_onchange = (event) => {
     setName(event.target.value);
   }
