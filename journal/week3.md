@@ -4,4 +4,7 @@
 - I have implemented custom confirmation Page
 - I have implement custom sign-in page
 - I have setup Cognito user pool
-- 
+<br />
+![logical diagram](/journal/assets/Congnito.PNG)
+<br />
+![logical diagram](/journal/assets/token.PNG) <br />
