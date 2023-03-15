@@ -3,9 +3,6 @@
 - I have implemented custom recovery page
 - I have implemented custom confirmation Page
 - I have implement custom sign-in page
-- I have setup Cognito user pool
-<br />
-![Congnito diagram](/journal/assets/Congnito.PNG)
-<br />
-![login diagram](/journal/assets/Logical-diagram.PNG)
+- I have setup Cognito user pool <br />
+![Congnito diagram](/journal/assets/Congnito.PNG) <br />
 ![logical diagram](/journal/assets/token.PNG) <br />
