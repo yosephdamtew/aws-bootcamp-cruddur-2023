@@ -5,6 +5,7 @@
 - I have implement custom sign-in page
 - I have setup Cognito user pool
 <br />
-![logical diagram](/journal/assets/Congnito.PNG)
+![Congnito diagram](/journal/assets/Congnito.PNG)
 <br />
+![login diagram](/journal/assets/Logical-diagram.PNG)
 ![logical diagram](/journal/assets/token.PNG) <br />
